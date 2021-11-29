@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:steelblue;
+    color:#fff;
+}
+
+.container {
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 20px 40px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.form-controller {
+    position: relative;
+    margin: 20px 0px 40px;
+    width: 300px;
+    
+}
+
+.form-controller input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-controller input:focus, .form-controller input:valid {
+    outline: none;
+    border-bottom-color: lightblue;
+}
+
+#submit {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    background:lightblue;
+    border: 0;
+
+}
+
+#submit:focus {
+    outline: 0;
+
+}
+
+#submit:active {
+    transform: scale(0.98);
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.form-controller label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-controller label span{
+    display:inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+
+}
+
+.form-controller input:focus + label span, 
+.form-controller input:valid + label span {
+    color:lightblue;
+    transform: translateY(-30px)
+}
